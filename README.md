@@ -27,7 +27,9 @@ The source is the canonical artifact. Do not edit generated files and expect edi
 
 ## Content and licensing
 
-The download links point to the app’s signed, notarized [0.5.0 alpha release](https://github.com/edrenck/constellation-bar/releases/tag/v0.5.0). Update these links and compatibility copy in `app/page.tsx` when a new release is published.
+The download links point to the app’s signed, notarized [0.7.1 alpha release](https://github.com/edrenck/constellation-bar/releases/tag/v0.7.1). Update the release/download constants and compatibility copy in `app/page.tsx` when a new release is published. The page explicitly distinguishes current-source previews from features in the published download. Do not remove that distinction until those changes ship.
+
+The theme browser groups Native → macOS/Cove/Porcelain and Typeset → scheme → variation. Its scheme IDs and 28 variant IDs mirror `TypesetScheme` in the app. Regenerate previews with the app’s `--render-previews` command, then copy the selected boards, `mini-app-*.png` panels and `wide-center-widgets.png` into `public/previews/`. Copy the exported `theme-catalog.json` into `app/theme-catalog.json` as well: the whole website uses those native theme tokens, including font and corner radius. Keep fixture/sample-data labels; these are app renders, not photos of a user’s desktop. Review the widget descriptions against the app’s `docs/WIDGETS.md` when adding providers.
 
 Original source is [MIT licensed](LICENSE).
 
